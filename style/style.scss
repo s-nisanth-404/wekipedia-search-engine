@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.search {
+  height: 50vh;
+  width: 100vw;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 5rem 1rem 5rem;
+  font-family: "Roboto", "sans-serif";
+  font-size: 2em;
+  border: none;
+  border-radius: 50px;
+}
+
+.left-bar {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+
+  .mic {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 2em;
+    margin-left: 2rem;
+    color: rgba(0, 0, 0, 0.4);
+    transition: 1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+      text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.right-bar {
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+
+  .search-btn {
+    pointer-events: all;
+    cursor: pointer;
+    font-size: 2em;
+    float: right;
+    margin-right: 2rem;
+    color: rgba(0, 0, 0, 0.4);
+    transition: 1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+      text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+      color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-btn {
+    font-size: 1.5em !important;
+    margin-right: 1rem !important;
+  }
+
+  .mic {
+    font-size: 1.5em !important;
+  }
+
+  .search-input {
+    font-size: 1em !important;
+  }
+}
+
+.result {
+  overflow: hidden;
+  margin: 0 0 5rem 0;
+
+  .result-title {
+    margin: 2rem 0rem;
+    font-size: 3em;
+    font-family: "Roboto", "sans-serif";
+    text-align: center;
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .result-description {
+    margin: 2rem 0rem;
+    font-size: 2em;
+    font-family: "Roboto", "sans-serif";
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .result-about {
+    margin: 2rem 5rem 2rem 5rem;
+    font-size: 2em;
+    font-family: "Roboto", "sans-serif";
+    line-height: 1.6;
+    word-spacing: 1em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .images {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
